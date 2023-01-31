@@ -1,4 +1,4 @@
-
+require 'pry'
 #SWBAT
 
 #create classes
@@ -12,3 +12,29 @@
 
 #You will
 #finish the Shoe class
+class Book 
+    #can dynamically do this with mass assignment
+    attr_reader :title 
+    attr_accessor :author, :page_count, :genre
+
+    #always. have. initialize.
+    def initialize(title)
+        @title = title 
+        @author = nil
+        @page_count = 0
+        @genre = nil
+    end 
+
+    #instance method 
+    def turn_page 
+        puts "Flipping the page...wow, you read fast!"
+    end 
+
+end 
+
+#book blueprint: title
+#b1: "i like to read"
+#b1 = Book.new("i like to read")
+#b1.title 
+
+#binding.pry
